@@ -4,6 +4,7 @@ import (
 	"Sort/bubbleSort"
 	"Sort/insertionSort"
 	"Sort/selectionSort"
+	"Sort/shellSort"
 	"fmt"
 )
 
@@ -35,5 +36,10 @@ func main() {
 	arr5 := []int{5, 2, 9, 3, 7, 6, 1, 8, 4}
 	insertionSort.InsertionSort(arr5)
 	fmt.Println("插入排序结果 arr5=", arr5)
+
+	//测试希尔排序
+	arr6 := []int{5, 2, 9, 3, 7, 6, 1, 8, 4}
+	shellSort.ShellSort(arr6)
+	fmt.Println("插入排序结果 arr6=", arr6)
 
 }

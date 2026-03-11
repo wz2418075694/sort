@@ -7,13 +7,15 @@ func SelectionSort(arr []int) {
 	//arr[i]是未排序区的第一个元素
 	for i := 0; i < n-1; i++ {
 		//假设未排序区的第一个元素是最小值,将i的索引赋值给它
-		index := i
+		index := i //记录最小值的索引
 		for j := i + 1; j < n; j++ {
 			//如果有比这个数还小的值，将索引赋值给它
 			if arr[j] < arr[index] {
 				index = j
 			}
-			//一轮循环结束，将找出的最值和未排序区的第一个元素(arr[i])互换
+		}
+		//一轮循环结束，将找出的最值和未排序区的第一个元素(arr[i])互换,一定不要在内循环中交换
+		if index != i { //避免arr[i]就是这轮的最值，产生意义的交换
 			arr[i], arr[index] = arr[index], arr[i]
 		}
 	}
