@@ -3,6 +3,7 @@ package main
 import (
 	"Sort/bubbleSort"
 	"Sort/insertionSort"
+	"Sort/mergeSort"
 	"Sort/selectionSort"
 	"Sort/shellSort"
 	"fmt"
@@ -42,4 +43,8 @@ func main() {
 	shellSort.ShellSort(arr6)
 	fmt.Println("插入排序结果 arr6=", arr6)
 
+	//归并排序测试
+	arr7 := []int{5, 2, 9, 3, 7, 6, 1, 8, 4}
+	mergeSort.MergeSort(arr7)
+	fmt.Println("归并排序结果 arr7=", arr7)
 }
