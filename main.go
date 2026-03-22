@@ -4,6 +4,7 @@ import (
 	"Sort/bubbleSort"
 	"Sort/insertionSort"
 	"Sort/mergeSort"
+	"Sort/quickSort"
 	"Sort/selectionSort"
 	"Sort/shellSort"
 	"fmt"
@@ -47,4 +48,10 @@ func main() {
 	arr7 := []int{5, 2, 9, 3, 7, 6, 1, 8, 4}
 	mergeSort.MergeSort(arr7)
 	fmt.Println("归并排序结果 arr7=", arr7)
+
+	//快速排序测试
+	arr8 := []int{5, 2, 9, 3, 7, 6, 1, 8, 4}
+	quickSort.QuickSort(arr8)
+	fmt.Println("快速排序结果 arr8=", arr8)
+
 }
